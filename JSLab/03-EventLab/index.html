@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <img id="my_image" src="./images/buildschool-logo.jpg" alt="logo">
+    <button id="change-btn" class="btn">換圖囉哇哈哈</button>
+    <script>
+        const btn = document.querySelector('#change-btn');
+
+        function changeImg() {
+            const Img = document.querySelector('#my_image');
+            let currentSrc = Img.getAttribute('src')
+
+            if (currentSrc === './images/buildschool-logo.jpg') {
+                Img.setAttribute('src', './images/iti-logo.jpeg');
+            } else {
+                Img.setAttribute('src', './images/buildschool-logo.jpg');
+            }
+        }
+        btn.addEventListener('click', changeImg);
+    </script>
+</body>
+
+</html>
